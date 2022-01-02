@@ -1,0 +1,13 @@
+## run_sample_agent
+
+avg reward: -2.15
+
+## run_run_model_01
+
+avg reward: -0.57
+
+## run_manually
+
+avg reward: -1.75
+
+

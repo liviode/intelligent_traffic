@@ -1,0 +1,46 @@
+{
+  "name": "model_01",
+  "description": "Minimal traffic model: 3 streets 2 lines 1 crossing",
+  "streets": [
+    {
+      "name": "s1",
+      "density": 1,
+      "length": 10
+    },
+    {
+      "name": "s2",
+      "density": 0.0,
+      "length": 10
+    },
+    {
+      "name": "s3",
+      "density": 0,
+      "length": 10
+    }
+  ],
+  "crossings": [
+    {
+      "name": "c1",
+      "lines": [
+        {
+          "name": "s1>s3",
+          "in": "s1",
+          "out": "s3"
+        },
+        {
+          "name": "s2>s3",
+          "in": "s2",
+          "out": "s3"
+        }
+      ],
+      "green_situations": [
+        [
+          "s1>s3"
+        ],
+        [
+          "s2>s3"
+        ]
+      ]
+    }
+  ]
+}

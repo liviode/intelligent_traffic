@@ -1,0 +1,195 @@
+{
+  "name": "model_zurich_see",
+  "description": "Minimal traffic model",
+  "streets": [
+    {
+      "name": "A1",
+      "density": 1,
+      "length": 10
+    },
+    {
+      "name": "A2",
+      "density": 0.7,
+      "length": 10
+    },
+    {
+      "name": "A3",
+      "density": 0,
+      "length": 10
+    },
+    {
+      "name": "A4",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "B1",
+      "density": 0,
+      "length": 10
+    },
+    {
+      "name": "B2",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "B3",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "B4",
+      "density": 0,
+      "length": 10
+    },
+    {
+      "name": "C1",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C2",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C3",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C4",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C5",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C6",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C7",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C8",
+      "density": 0.8,
+      "length": 10
+    },
+    {
+      "name": "C9",
+      "density": 0.8,
+      "length": 10
+    }
+  ],
+  "crossings": [
+    {
+      "name": "K1",
+      "lines": [
+        {
+          "name": "A1>B2",
+          "in": "A1",
+          "out": "B2"
+        },
+        {
+          "name": "A1>A2",
+          "in": "A1",
+          "out": "A2"
+        },
+        {
+          "name": "A3>A4",
+          "in": "A3",
+          "out": "A4"
+        },
+        {
+          "name": "A3>B3",
+          "in": "A3",
+          "out": "B3"
+        },
+        {
+          "name": "B1>A4",
+          "in": "B1",
+          "out": "A4"
+        },
+        {
+          "name": "B1>B2",
+          "in": "B1",
+          "out": "B2"
+        },
+        {
+          "name": "B4>A2",
+          "in": "B4",
+          "out": "A2"
+        },
+        {
+          "name": "B4>B3",
+          "in": "B4",
+          "out": "B3"
+        }
+      ],
+      "green_situations": [
+        ["A1>B2", "A1>A2", "A3>A4"],
+        ["A1>B2", "A3>B3", "A3>A4"],
+        ["B1>B2", "B4>B3", "B1>A4","B4>A2"],
+        ["A1>B2", "A3>B3", "B1>A4"],
+        ["B1>A4", "B4>B3", "B4>A2","A1>B2"]
+      ]
+    },
+    {
+      "name": "K2",
+      "lines": [
+        {
+          "name": "C1>C4",
+          "in": "C1",
+          "out": "C4"
+        },
+        {
+          "name": "C2>B1",
+          "in": "C2",
+          "out": "B1"
+        },
+        {
+          "name": "C2>B4",
+          "in": "C2",
+          "out": "B4"
+        },
+        {
+          "name": "C2>C3",
+          "in": "C2",
+          "out": "C3"
+        },
+        {
+          "name": "C5>B4",
+          "in": "C5",
+          "out": "B4"
+        },
+        {
+          "name": "C5>B1",
+          "in": "C5",
+          "out": "B1"
+        },
+        {
+          "name": "C6>C9",
+          "in": "C6",
+          "out": "C9"
+        },
+        {
+          "name": "C7>C8",
+          "in": "C7",
+          "out": "C8"
+        }
+      ],
+      "green_situations": [
+        ["C2>B1", "C2>B4", "C2>C3", "C1>C4", "C6>C9", "C7>C8"],
+        ["C3>B1", "C3>B4", "C6>C9", "C7>C8"]
+      ]
+    }
+
+  ]
+}

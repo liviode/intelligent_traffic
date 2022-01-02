@@ -1,0 +1,83 @@
+{
+  "name": "model_02",
+  "description": "Double Minimal traffic model: 2x (3 streets 2 lines 1 crossing)",
+  "streets": [
+    {
+      "name": "s1a",
+      "density": 1,
+      "length": 10
+    },
+    {
+      "name": "s2a",
+      "density": 0.7,
+      "length": 10
+    },
+    {
+      "name": "s3a",
+      "density": 0,
+      "length": 10
+    },{
+      "name": "s1b",
+      "density": 1,
+      "length": 10
+    },
+    {
+      "name": "s2b",
+      "density": 0.7,
+      "length": 10
+    },
+    {
+      "name": "s3b",
+      "density": 0.2,
+      "length": 10
+    }
+  ],
+  "crossings": [
+    {
+      "name": "c1",
+      "lines": [
+        {
+          "name": "s1a>s3a",
+          "in": "s1a",
+          "out": "s3a"
+        },
+        {
+          "name": "s2a>s3a",
+          "in": "s2a",
+          "out": "s3a"
+        }
+      ],
+      "green_situations": [
+        [
+          "s1a>s3a"
+        ],
+        [
+          "s2a>s3a"
+        ]
+      ]
+    },
+    {
+      "name": "c2",
+      "lines": [
+        {
+          "name": "s1b>s3b",
+          "in": "s1b",
+          "out": "s3b"
+        },
+        {
+          "name": "s2b>s3b",
+          "in": "s2b",
+          "out": "s3b"
+        }
+      ],
+      "green_situations": [
+        [
+          "s1b>s3b"
+        ],
+        [
+          "s2b>s3b"
+        ]
+      ]
+    }
+  ]
+}
