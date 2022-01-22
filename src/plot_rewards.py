@@ -10,7 +10,7 @@ type=sys.argv[2]
 #model_name='model_03'
 #type = 'sample'
 
-file_name='../outdata/'+model_name+'_'+type+'.txt'
+file_name='outdata/'+model_name+'_'+type+'.txt'
 
 
 

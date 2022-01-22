@@ -45,9 +45,9 @@ class TrainingAgentThread(Thread):
 
 if __name__ == '__main__':
     model_name = sys.argv[1] if len(sys.argv) > 1 else 'model_01'
-    mode = sys.argv[2] if len(sys.argv) > 2 else 'test'
-    env = TrafficEnv(model_name=model_name, headless=False, sleep_per_step=200, file_name=model_name+"_model.txt")
-    agent_thread = TrainingAgentThread(env, mode=mode)
+    headless = True if len(sys.argv) > 2 and sys.argv[2] == 'headless' else False
+    env = TrafficEnv(model_name=model_name, headless=headless, sleep_per_step=200, file_name=model_name+"_model.txt")
+    agent_thread = TrainingAgentThread(env, mode='test')
     env.agent_thread = agent_thread
     agent_thread.start()
     print(f'TrainingAgentThread started. model_name: {model_name} mode: {mode}')

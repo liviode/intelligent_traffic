@@ -29,7 +29,8 @@ class TrafficEnv(gym.Env):
 
         self.tm = tm if model_name is None else load_model(model_name)
         self.last_step_info = []
-        self.reward_file = open('../outdata/' + file_name, "w")
+
+        self.reward_file = open('outdata/' + file_name, "w")
 
         if headless:
             self.tk = None

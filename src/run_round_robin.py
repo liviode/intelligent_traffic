@@ -25,7 +25,7 @@ class RoundRobinAgentThread(Thread):
 
                 action = t % max
                 observation, reward, done, info = self.env.step(action)
-                #time.sleep(0)
+                # time.sleep(0)
                 if done:
                     print("Episode finished after {} timesteps".format(t + 1))
                     break
@@ -36,7 +36,9 @@ class RoundRobinAgentThread(Thread):
 
 if __name__ == '__main__':
     model_name = sys.argv[1] if len(sys.argv) > 1 else 'model_01'
-    env = TrafficEnv(model_name=model_name, cycles_per_action=5, sleep_per_step=200, file_name=model_name+"_round_robin.txt", headless=True)
+    headless = True if len(sys.argv) > 2 and sys.argv[2] == 'headless' else False
+    env = TrafficEnv(model_name=model_name, cycles_per_action=5, sleep_per_step=200,
+                     file_name=model_name + "_round_robin.txt", headless=headless)
     agent_thread = RoundRobinAgentThread(env)
     env.agent_thread = agent_thread
     agent_thread.start()

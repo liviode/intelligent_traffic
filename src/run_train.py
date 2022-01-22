@@ -26,7 +26,7 @@ class TrainingAgentThread(Thread):
 
         dqn = build_agent(model, actions)
         dqn.compile(Adam(lr=1e-3), metrics=['mae'])
-        dqn.fit(self.env, nb_steps=600, visualize=False, verbose=1)
+        dqn.fit(self.env, nb_steps=2000, visualize=False, verbose=1)
 
         save_name = os.path.join(model_dir, env.tm.name, 'out', 'model_dqn_weights.h5f')
 

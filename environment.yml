@@ -1,4 +1,4 @@
-name: gym2
+name: inteltraffic
 channels:
   - defaults
 dependencies:
@@ -163,4 +163,4 @@ dependencies:
       - urllib3==1.26.6
       - werkzeug==2.0.1
       - wrapt==1.12.1
-prefix: /gym2
+prefix: /inteltraffic
