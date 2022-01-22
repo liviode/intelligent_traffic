@@ -8,9 +8,11 @@ On MacOS with homebrew
 
 `brew install --cask anaconda`
 
+(See also: https://docs.anaconda.com/anaconda/install/index.html)
+
 ### Setup Python Environment
 
-Goto project directory.
+Go to project directory.
 
 `conda env create -f environment.yml`
 
