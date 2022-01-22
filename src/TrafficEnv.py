@@ -281,7 +281,6 @@ class TrafficEnv(gym.Env):
         self.tm_refresh_tk()
 
     def step(self, action):
-        print("ciao")
         if action == -1:
             pass
         else:
