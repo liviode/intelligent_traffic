@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-###Install conda (anaconda)
+### Install conda (anaconda)
 
 On MacOS with homebrew
 
 `brew install --cask anaconda`
 
-###Setup Python Environment
+### Setup Python Environment
 
 Goto project directory.
 
