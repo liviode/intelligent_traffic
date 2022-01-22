@@ -37,8 +37,13 @@ class RoundRobinAgentThread(Thread):
 if __name__ == '__main__':
     model_name = sys.argv[1] if len(sys.argv) > 1 else 'model_01'
     headless = True if len(sys.argv) > 2 and sys.argv[2] == 'headless' else False
-    env = TrafficEnv(model_name=model_name, cycles_per_action=5, sleep_per_step=200,
-                     file_name=model_name + "_round_robin.txt", headless=headless)
+    sleep_per_step = 0 if headless else 1000
+
+    env = TrafficEnv(model_name=model_name,
+                     cycles_per_action=5,
+                     sleep_per_step=sleep_per_step,
+                     file_name=model_name + "_round_robin.txt",
+                     headless=headless)
     agent_thread = RoundRobinAgentThread(env)
     env.agent_thread = agent_thread
     agent_thread.start()
